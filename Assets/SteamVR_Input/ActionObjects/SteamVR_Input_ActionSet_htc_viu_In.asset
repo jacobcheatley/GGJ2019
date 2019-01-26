@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2905ea0c8caedb944bc5699d8292aa64, type: 3}
+  m_Name: SteamVR_Input_ActionSet_htc_viu_In
+  m_EditorClassIdentifier: 
+  actionSet: {fileID: 0}
+  listDirection: 0
+  actions:
+  - {fileID: 11400000, guid: 6769cd8e59003bd43bf508bfebd4c44c, type: 2}
+  - {fileID: 11400000, guid: 49047f1c6f675cb488d0b9b4a1a18504, type: 2}
+  - {fileID: 11400000, guid: d59a72ebc8a31f445af6348214d9458a, type: 2}
+  - {fileID: 11400000, guid: 9c4fc23e117b4cd459102b95e49a16a0, type: 2}
+  - {fileID: 11400000, guid: f0bf9a1709470234e939d50f2a9918c5, type: 2}
+  - {fileID: 11400000, guid: 5c557c92aeff65a45935aaa7b2bad304, type: 2}
+  - {fileID: 11400000, guid: e0ac90a27263d914cb8e00d5153c2f04, type: 2}
+  - {fileID: 11400000, guid: 5742f2efbde0990419b9da0853de89b6, type: 2}
+  - {fileID: 11400000, guid: 04c1afb69af14d54898fffda2a092b7d, type: 2}
+  - {fileID: 11400000, guid: 3d003f8356e182d43ac35b2ec4557c3d, type: 2}
+  - {fileID: 11400000, guid: 93d4858c94bb7c547aa1834a31f3807a, type: 2}
+  - {fileID: 11400000, guid: a4382ff98ff91e64f98e1a8169ece220, type: 2}
+  - {fileID: 11400000, guid: 611893a5293a20843895006a14f80694, type: 2}
+  - {fileID: 11400000, guid: 599d611a97f315d41819744279d0540c, type: 2}
+  - {fileID: 11400000, guid: 2f0ed9d1e4572234ebe0853e355b3865, type: 2}
+  - {fileID: 11400000, guid: 0e4f498b67032ba4885b1df4a76f134a, type: 2}
+  - {fileID: 11400000, guid: c768121f10f6d5649b3e2526708b41dd, type: 2}
+  - {fileID: 11400000, guid: 85187639530d71d469ed0ede7965a924, type: 2}
+  - {fileID: 11400000, guid: a352513166ab80947b4151723a3c1339, type: 2}
+  - {fileID: 11400000, guid: 56407962fef64b045b8b54075be205f3, type: 2}
+  - {fileID: 11400000, guid: 5598c396b21a7094594f99758f6643b8, type: 2}
+  - {fileID: 11400000, guid: 504894f4bc268ec47843408d8c4a435f, type: 2}
+  - {fileID: 11400000, guid: 07d589c18e7e08f4f97b7a7703804811, type: 2}
+  - {fileID: 11400000, guid: 36f2ac325af41354bb6dcd97cd42317a, type: 2}
+  - {fileID: 11400000, guid: b213720363ceaa34e8728f2be7306d51, type: 2}
+  - {fileID: 11400000, guid: 69020dd7f98e3ce48a6fc6d07900b80d, type: 2}
+  - {fileID: 11400000, guid: 38a3642d896c51141a539777006222a2, type: 2}
+  - {fileID: 11400000, guid: 4d7f2cf49ffbc584daaa1456bfb81040, type: 2}
+  - {fileID: 11400000, guid: e7048722ef39eea43a542349a6f42246, type: 2}
+  - {fileID: 11400000, guid: fd3de91174b333e48ac6b94f6d097e26, type: 2}
+  - {fileID: 11400000, guid: 2082e87acea17e04dabe8eb00adaa8bc, type: 2}
+  - {fileID: 11400000, guid: d1b18faed97834048a1a250c2f85a0a3, type: 2}
+  - {fileID: 11400000, guid: 2533e295703fc6c44a655258915cf3b5, type: 2}
+  - {fileID: 11400000, guid: f7b2bb80057969c448ae0d285a63ab4a, type: 2}
+  - {fileID: 11400000, guid: 668e372b34471284aa3eb9f1edbbc0a4, type: 2}
+  - {fileID: 11400000, guid: 90fc360b9096ae644b698c9a2bea48e2, type: 2}
+  - {fileID: 11400000, guid: adf0c2bde9d029b4785cef64af91764b, type: 2}
+  - {fileID: 11400000, guid: 7320f6ecbc75a1a478baea1cc994fb24, type: 2}
+  - {fileID: 11400000, guid: e13420e749575a44aaec25b70b2e3c77, type: 2}
+  viu_press_00: {fileID: 11400000, guid: 6769cd8e59003bd43bf508bfebd4c44c, type: 2}
+  viu_press_01: {fileID: 11400000, guid: 49047f1c6f675cb488d0b9b4a1a18504, type: 2}
+  viu_press_02: {fileID: 11400000, guid: d59a72ebc8a31f445af6348214d9458a, type: 2}
+  viu_press_03: {fileID: 11400000, guid: 9c4fc23e117b4cd459102b95e49a16a0, type: 2}
+  viu_press_04: {fileID: 11400000, guid: f0bf9a1709470234e939d50f2a9918c5, type: 2}
+  viu_press_05: {fileID: 11400000, guid: 5c557c92aeff65a45935aaa7b2bad304, type: 2}
+  viu_press_06: {fileID: 11400000, guid: e0ac90a27263d914cb8e00d5153c2f04, type: 2}
+  viu_press_07: {fileID: 11400000, guid: 5742f2efbde0990419b9da0853de89b6, type: 2}
+  viu_press_31: {fileID: 11400000, guid: 04c1afb69af14d54898fffda2a092b7d, type: 2}
+  viu_press_32: {fileID: 11400000, guid: 3d003f8356e182d43ac35b2ec4557c3d, type: 2}
+  viu_press_33: {fileID: 11400000, guid: 93d4858c94bb7c547aa1834a31f3807a, type: 2}
+  viu_press_34: {fileID: 11400000, guid: a4382ff98ff91e64f98e1a8169ece220, type: 2}
+  viu_touch_00: {fileID: 11400000, guid: 611893a5293a20843895006a14f80694, type: 2}
+  viu_touch_01: {fileID: 11400000, guid: 599d611a97f315d41819744279d0540c, type: 2}
+  viu_touch_02: {fileID: 11400000, guid: 2f0ed9d1e4572234ebe0853e355b3865, type: 2}
+  viu_touch_03: {fileID: 11400000, guid: 0e4f498b67032ba4885b1df4a76f134a, type: 2}
+  viu_touch_04: {fileID: 11400000, guid: c768121f10f6d5649b3e2526708b41dd, type: 2}
+  viu_touch_05: {fileID: 11400000, guid: 85187639530d71d469ed0ede7965a924, type: 2}
+  viu_touch_06: {fileID: 11400000, guid: a352513166ab80947b4151723a3c1339, type: 2}
+  viu_touch_07: {fileID: 11400000, guid: 56407962fef64b045b8b54075be205f3, type: 2}
+  viu_touch_31: {fileID: 11400000, guid: 5598c396b21a7094594f99758f6643b8, type: 2}
+  viu_touch_32: {fileID: 11400000, guid: 504894f4bc268ec47843408d8c4a435f, type: 2}
+  viu_touch_33: {fileID: 11400000, guid: 07d589c18e7e08f4f97b7a7703804811, type: 2}
+  viu_touch_34: {fileID: 11400000, guid: 36f2ac325af41354bb6dcd97cd42317a, type: 2}
+  viu_axis_0x: {fileID: 11400000, guid: b213720363ceaa34e8728f2be7306d51, type: 2}
+  viu_axis_0y: {fileID: 11400000, guid: 69020dd7f98e3ce48a6fc6d07900b80d, type: 2}
+  viu_axis_1x: {fileID: 11400000, guid: 38a3642d896c51141a539777006222a2, type: 2}
+  viu_axis_1y: {fileID: 11400000, guid: 4d7f2cf49ffbc584daaa1456bfb81040, type: 2}
+  viu_axis_2x: {fileID: 11400000, guid: e7048722ef39eea43a542349a6f42246, type: 2}
+  viu_axis_2y: {fileID: 11400000, guid: fd3de91174b333e48ac6b94f6d097e26, type: 2}
+  viu_axis_3x: {fileID: 11400000, guid: 2082e87acea17e04dabe8eb00adaa8bc, type: 2}
+  viu_axis_3y: {fileID: 11400000, guid: d1b18faed97834048a1a250c2f85a0a3, type: 2}
+  viu_axis_4x: {fileID: 11400000, guid: 2533e295703fc6c44a655258915cf3b5, type: 2}
+  viu_axis_4y: {fileID: 11400000, guid: f7b2bb80057969c448ae0d285a63ab4a, type: 2}
+  viu_axis_0xy: {fileID: 11400000, guid: 668e372b34471284aa3eb9f1edbbc0a4, type: 2}
+  viu_axis_1xy: {fileID: 11400000, guid: 90fc360b9096ae644b698c9a2bea48e2, type: 2}
+  viu_axis_2xy: {fileID: 11400000, guid: adf0c2bde9d029b4785cef64af91764b, type: 2}
+  viu_axis_3xy: {fileID: 11400000, guid: 7320f6ecbc75a1a478baea1cc994fb24, type: 2}
+  viu_axis_4xy: {fileID: 11400000, guid: e13420e749575a44aaec25b70b2e3c77, type: 2}

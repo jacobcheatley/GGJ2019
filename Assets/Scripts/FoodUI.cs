@@ -17,7 +17,7 @@ public class FoodUI : MonoBehaviour
     public void Start()
     {
         // Name and Price
-        namePriceText.text = foodInfo.name + " - $" + foodInfo.price;
+        namePriceText.text = $"{foodInfo.name} - ${foodInfo.price}";
 
         // Nutrition Icons
         nutritionImage.sprite = nutritionIcons[(int)foodInfo.foodGroup];
@@ -31,7 +31,8 @@ public class FoodUI : MonoBehaviour
     public void Remove()
     {
         // Disable all UI
-        this.enabled = false;
+        gameObject.SetActive(false);
+        //this.enabled = false;
     }
 
     public void Update()

@@ -54,7 +54,7 @@ namespace Valve.VR.InteractionSystem
         public bool highlightOnHover = true;
         private MeshRenderer[] highlightRenderers;
         private MeshRenderer[] existingRenderers;
-        private GameObject highlightHolder;
+        public GameObject highlightHolder;
         private SkinnedMeshRenderer[] highlightSkinnedRenderers;
         private SkinnedMeshRenderer[] existingSkinnedRenderers;
         private static Material highlightMat;

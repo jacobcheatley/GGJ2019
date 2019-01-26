@@ -16,10 +16,12 @@ MonoBehaviour:
   - _default
   - platformer
   - buggy
+  - htc_viu
   actionSetObjects:
   - {fileID: 11400000, guid: 6bc2c05570f411548956394667371010, type: 2}
   - {fileID: 11400000, guid: 9a3de6bfd23708f498ea01bf5b30d913, type: 2}
   - {fileID: 11400000, guid: c6250fa177af59d4ba1374bcd36d82c4, type: 2}
+  - {fileID: 11400000, guid: 4ac1febf16824054f89db361ace0008a, type: 2}
   actionNames:
   - __actions_default_in_InteractUI
   - __actions_default_in_Teleport
@@ -36,6 +38,45 @@ MonoBehaviour:
   - __actions_buggy_in_Throttle
   - __actions_buggy_in_Brake
   - __actions_buggy_in_Reset
+  - __actions_htc_viu_in_viu_press_00
+  - __actions_htc_viu_in_viu_press_01
+  - __actions_htc_viu_in_viu_press_02
+  - __actions_htc_viu_in_viu_press_03
+  - __actions_htc_viu_in_viu_press_04
+  - __actions_htc_viu_in_viu_press_05
+  - __actions_htc_viu_in_viu_press_06
+  - __actions_htc_viu_in_viu_press_07
+  - __actions_htc_viu_in_viu_press_31
+  - __actions_htc_viu_in_viu_press_32
+  - __actions_htc_viu_in_viu_press_33
+  - __actions_htc_viu_in_viu_press_34
+  - __actions_htc_viu_in_viu_touch_00
+  - __actions_htc_viu_in_viu_touch_01
+  - __actions_htc_viu_in_viu_touch_02
+  - __actions_htc_viu_in_viu_touch_03
+  - __actions_htc_viu_in_viu_touch_04
+  - __actions_htc_viu_in_viu_touch_05
+  - __actions_htc_viu_in_viu_touch_06
+  - __actions_htc_viu_in_viu_touch_07
+  - __actions_htc_viu_in_viu_touch_31
+  - __actions_htc_viu_in_viu_touch_32
+  - __actions_htc_viu_in_viu_touch_33
+  - __actions_htc_viu_in_viu_touch_34
+  - __actions_htc_viu_in_viu_axis_0x
+  - __actions_htc_viu_in_viu_axis_0y
+  - __actions_htc_viu_in_viu_axis_1x
+  - __actions_htc_viu_in_viu_axis_1y
+  - __actions_htc_viu_in_viu_axis_2x
+  - __actions_htc_viu_in_viu_axis_2y
+  - __actions_htc_viu_in_viu_axis_3x
+  - __actions_htc_viu_in_viu_axis_3y
+  - __actions_htc_viu_in_viu_axis_4x
+  - __actions_htc_viu_in_viu_axis_4y
+  - __actions_htc_viu_in_viu_axis_0xy
+  - __actions_htc_viu_in_viu_axis_1xy
+  - __actions_htc_viu_in_viu_axis_2xy
+  - __actions_htc_viu_in_viu_axis_3xy
+  - __actions_htc_viu_in_viu_axis_4xy
   actionObjects:
   - {fileID: 11400000, guid: b07630dd42d03364489cd8529b528382, type: 2}
   - {fileID: 11400000, guid: f39904f840e8bcb40b8ac8480bc786a2, type: 2}
@@ -52,3 +93,42 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6dec6a5171bf5d468427c2fed71f1ee, type: 2}
   - {fileID: 11400000, guid: 8f168d7efb25f61458cfc5f42bf9e28c, type: 2}
   - {fileID: 11400000, guid: 152c6f01c0274fa41be048e340c63376, type: 2}
+  - {fileID: 11400000, guid: 6769cd8e59003bd43bf508bfebd4c44c, type: 2}
+  - {fileID: 11400000, guid: 49047f1c6f675cb488d0b9b4a1a18504, type: 2}
+  - {fileID: 11400000, guid: d59a72ebc8a31f445af6348214d9458a, type: 2}
+  - {fileID: 11400000, guid: 9c4fc23e117b4cd459102b95e49a16a0, type: 2}
+  - {fileID: 11400000, guid: f0bf9a1709470234e939d50f2a9918c5, type: 2}
+  - {fileID: 11400000, guid: 5c557c92aeff65a45935aaa7b2bad304, type: 2}
+  - {fileID: 11400000, guid: e0ac90a27263d914cb8e00d5153c2f04, type: 2}
+  - {fileID: 11400000, guid: 5742f2efbde0990419b9da0853de89b6, type: 2}
+  - {fileID: 11400000, guid: 04c1afb69af14d54898fffda2a092b7d, type: 2}
+  - {fileID: 11400000, guid: 3d003f8356e182d43ac35b2ec4557c3d, type: 2}
+  - {fileID: 11400000, guid: 93d4858c94bb7c547aa1834a31f3807a, type: 2}
+  - {fileID: 11400000, guid: a4382ff98ff91e64f98e1a8169ece220, type: 2}
+  - {fileID: 11400000, guid: 611893a5293a20843895006a14f80694, type: 2}
+  - {fileID: 11400000, guid: 599d611a97f315d41819744279d0540c, type: 2}
+  - {fileID: 11400000, guid: 2f0ed9d1e4572234ebe0853e355b3865, type: 2}
+  - {fileID: 11400000, guid: 0e4f498b67032ba4885b1df4a76f134a, type: 2}
+  - {fileID: 11400000, guid: c768121f10f6d5649b3e2526708b41dd, type: 2}
+  - {fileID: 11400000, guid: 85187639530d71d469ed0ede7965a924, type: 2}
+  - {fileID: 11400000, guid: a352513166ab80947b4151723a3c1339, type: 2}
+  - {fileID: 11400000, guid: 56407962fef64b045b8b54075be205f3, type: 2}
+  - {fileID: 11400000, guid: 5598c396b21a7094594f99758f6643b8, type: 2}
+  - {fileID: 11400000, guid: 504894f4bc268ec47843408d8c4a435f, type: 2}
+  - {fileID: 11400000, guid: 07d589c18e7e08f4f97b7a7703804811, type: 2}
+  - {fileID: 11400000, guid: 36f2ac325af41354bb6dcd97cd42317a, type: 2}
+  - {fileID: 11400000, guid: b213720363ceaa34e8728f2be7306d51, type: 2}
+  - {fileID: 11400000, guid: 69020dd7f98e3ce48a6fc6d07900b80d, type: 2}
+  - {fileID: 11400000, guid: 38a3642d896c51141a539777006222a2, type: 2}
+  - {fileID: 11400000, guid: 4d7f2cf49ffbc584daaa1456bfb81040, type: 2}
+  - {fileID: 11400000, guid: e7048722ef39eea43a542349a6f42246, type: 2}
+  - {fileID: 11400000, guid: fd3de91174b333e48ac6b94f6d097e26, type: 2}
+  - {fileID: 11400000, guid: 2082e87acea17e04dabe8eb00adaa8bc, type: 2}
+  - {fileID: 11400000, guid: d1b18faed97834048a1a250c2f85a0a3, type: 2}
+  - {fileID: 11400000, guid: 2533e295703fc6c44a655258915cf3b5, type: 2}
+  - {fileID: 11400000, guid: f7b2bb80057969c448ae0d285a63ab4a, type: 2}
+  - {fileID: 11400000, guid: 668e372b34471284aa3eb9f1edbbc0a4, type: 2}
+  - {fileID: 11400000, guid: 90fc360b9096ae644b698c9a2bea48e2, type: 2}
+  - {fileID: 11400000, guid: adf0c2bde9d029b4785cef64af91764b, type: 2}
+  - {fileID: 11400000, guid: 7320f6ecbc75a1a478baea1cc994fb24, type: 2}
+  - {fileID: 11400000, guid: e13420e749575a44aaec25b70b2e3c77, type: 2}

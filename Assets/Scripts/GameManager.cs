@@ -1,5 +1,10 @@
-﻿using UnityEngine;
+﻿using HTC.UnityPlugin.Vive;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +21,7 @@ public class GameManager : MonoBehaviour
     public Gradient moneyGradient;
 
     [HideInInspector]
-    public FridgeFood[] fridgeFoodObjects;
+    public List<FoodItem> fridgeFoodObjects = new List<FoodItem>();
     [HideInInspector]
     public Transform cameraTransform;
     private float startingMoney;
@@ -29,26 +34,37 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        fridgeFoodObjects = new FridgeFood[spawnLocations.Length];
         startingMoney = money;
         cameraTransform = Camera.main.transform;
         //Spawn food in fridge
         for (int i = 0; i < spawnLocations.Length; i++)
         {
             Transform location = spawnLocations[i];
-            fridgeFoodObjects[i] = Instantiate(Randomization.RandomObject(foodPrefabs), location.position, Quaternion.identity).GetComponent<FridgeFood>();
+            fridgeFoodObjects.Add(Instantiate(Randomization.RandomObject(foodPrefabs), location.position, Quaternion.identity).GetComponent<FoodItem>());
         }
     }
 
-    public void SpendMoney(int spent)
+    public void Update()
     {
-        money -= spent;
-
-        foreach (FridgeFood fridgeFood in fridgeFoodObjects)
+        if (Input.GetKeyDown(KeyCode.R))
         {
+            Debug.Log("Resetting scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    public void BuyFood(FoodItem foodItem)
+    {
+        money -= foodItem.foodInfo.price;
+        fridgeFoodObjects.Remove(foodItem);
+
+        for (int i = fridgeFoodObjects.Count - 1; i >= 0; i--)
+        {
+            FoodItem fridgeFood = fridgeFoodObjects[i];
             if (fridgeFood.foodInfo.price > money)
             {
                 fridgeFood.DisablePurchasability();
+                fridgeFoodObjects.Remove(fridgeFood);
             }
         }
 
