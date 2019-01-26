@@ -13,6 +13,8 @@ public class FoodUI : MonoBehaviour
     [Header("Objects")]
     public Image nutritionImage;
     public Text namePriceText;
+    public GameObject[] disableOnCantBuy;
+    public GameObject cross;
 
     public void Start()
     {
@@ -28,10 +30,14 @@ public class FoodUI : MonoBehaviour
         }
     }
 
-    public void Remove()
+    public void CantBuy()
     {
         // Disable all UI
-        gameObject.SetActive(false);
+        foreach (GameObject item in disableOnCantBuy)
+        {
+            item.SetActive(false);
+        }
+        cross.SetActive(true);
         //this.enabled = false;
     }
 

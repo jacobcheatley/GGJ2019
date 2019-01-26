@@ -11,6 +11,8 @@ public class DrinkInstance
 public class BeerBottle : MonoBehaviour
 {
     public Drunkeness drunkeness;
+    public Gradient gradient;
+    public Light[] lights;
 
     bool held = false;
     private List<DrinkInstance> drinks = new List<DrinkInstance>();
@@ -45,13 +47,18 @@ public class BeerBottle : MonoBehaviour
         foreach (DrinkInstance drink in drinks)
         {
             drink.timeRemaining -= Time.deltaTime;
-            intensity += Mathf.Clamp(1 - (Mathf.Abs(drink.timeRemaining - drink.halfTime) / drink.halfTime), 0, 5);
+            intensity += 1 - (Mathf.Abs(drink.timeRemaining - drink.halfTime) / drink.halfTime);
             if (drink.timeRemaining <= 0) toRemove.Add(drink);
         }
         foreach (DrinkInstance drink in toRemove)
         {
             drinks.Remove(drink);
         }
+        intensity = Mathf.Clamp(intensity, 0, 5);
         drunkeness.SetVariables(0.005f * intensity, 0.05f * intensity);
+        foreach (Light light in lights)
+        {
+            light.color = gradient.Evaluate(intensity / 5);
+        }
     }
 }

@@ -16,6 +16,12 @@ public class FoodItem : MonoBehaviour
     public Text title;
 
     private bool bought;
+    private bool flying = false;
+    private bool canScore = false;
+    private Transform panArea;
+    private float panTime;
+    private const float minTime = 0.5f;
+    private const float minFlyingDistance = 0.5f;
 
     private void Start()
     {
@@ -24,8 +30,20 @@ public class FoodItem : MonoBehaviour
         countdownImage.fillAmount = 0;
     }
 
-    public void DisablePurchasability()
+    private void Update()
     {
+        if (flying)
+        {
+            if (Vector3.Distance(transform.position, panArea.position) >= minFlyingDistance)
+            {
+
+            }
+        }
+    }
+
+    public void CantBuy()
+    {
+        foodUI.CantBuy();
         meshHolder.transform.parent = transform.parent;
         Destroy(gameObject);
     }
@@ -37,7 +55,7 @@ public class FoodItem : MonoBehaviour
         {
             bought = true;
             GameManager.instance.BuyFood(this);
-            foodUI.Remove();
+            Destroy(foodUI.gameObject);
             rb.useGravity = true;
             rb.constraints = RigidbodyConstraints.None;
         }
@@ -50,11 +68,29 @@ public class FoodItem : MonoBehaviour
         rb.constraints = RigidbodyConstraints.None;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Furniture")
+            flying = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Floor")
         {
             StartCoroutine("FiveSecondRule");
+            flying = false;
+        }
+
+        if (other.tag == "FryingPan" && bought)
+        {
+            if (canScore)
+            {
+                canScore = false;
+                Score();
+            }
+            panTime = Time.time;
+            flying = false;
         }
     }
 
@@ -65,6 +101,20 @@ public class FoodItem : MonoBehaviour
             StopCoroutine("FiveSecondRule");
             countdownImage.fillAmount = 0;
         }
+
+        if (other.tag == "FryingPan" && bought)
+        {
+            if (Time.time - panTime >= minTime)
+            {
+                panArea = other.transform;
+                flying = true;
+            }
+        }
+    }
+
+    private void Score()
+    {
+        throw new NotImplementedException();
     }
 
     private IEnumerator FiveSecondRule()

@@ -1,4 +1,5 @@
 ﻿using HTC.UnityPlugin.Vive;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,12 +20,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] foodPrefabs;
     public Text flatMoneyText;
     public Gradient moneyGradient;
+    public float timeRemaining = 90;
 
     [HideInInspector]
     public List<FoodItem> fridgeFoodObjects = new List<FoodItem>();
     [HideInInspector]
     public Transform cameraTransform;
     private float startingMoney;
+    private float startingTime;
 
     public void Awake()
     {
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         startingMoney = money;
+        startingTime = timeRemaining;
         cameraTransform = Camera.main.transform;
         //Spawn food in fridge
         for (int i = 0; i < spawnLocations.Length; i++)
@@ -63,7 +67,7 @@ public class GameManager : MonoBehaviour
             FoodItem fridgeFood = fridgeFoodObjects[i];
             if (fridgeFood.foodInfo.price > money)
             {
-                fridgeFood.DisablePurchasability();
+                fridgeFood.CantBuy();
                 fridgeFoodObjects.Remove(fridgeFood);
             }
         }
@@ -72,5 +76,19 @@ public class GameManager : MonoBehaviour
         Color textColor = moneyGradient.Evaluate(money / startingMoney);
         flatMoneyText.color = textColor;
         flatMoneyText.text = "$" + money;
+    }
+
+    public void StartCountdown()
+    {
+        StartCoroutine(Countdown());
+    }
+
+    private IEnumerator Countdown()
+    {
+        while (timeRemaining >= 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            yield return null;
+        }
     }
 }
