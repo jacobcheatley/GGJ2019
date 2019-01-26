@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class FoodUI : MonoBehaviour
 
     public void Start()
     {
-        // Name
+        // Name and Price
         namePriceText.text = foodInfo.name + " - $" + foodInfo.price;
 
         // Nutrition Icons
@@ -25,6 +26,12 @@ public class FoodUI : MonoBehaviour
         {
             Instantiate(nutritionObject, nutritionObject.transform.parent);
         }
+    }
+
+    public void Remove()
+    {
+        // Disable all UI
+        this.enabled = false;
     }
 
     public void Update()

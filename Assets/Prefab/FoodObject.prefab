@@ -661,11 +661,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3535150111807619605}
   foodInfo: {fileID: 3535150111807619604}
+  foodUI: {fileID: 3535150110141982183}
   interactables:
   - {fileID: 3535150111807619602}
   - {fileID: 3535150111807619603}
   - {fileID: 3535150111807619600}
   - {fileID: 3535150111807619601}
+  title: {fileID: 3535150110325407119}
 --- !u!114 &3535150111807619604
 MonoBehaviour:
   m_ObjectHideFlags: 0
