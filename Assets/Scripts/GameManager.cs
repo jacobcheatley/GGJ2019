@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public List<FoodItem> fridgeFoodObjects = new List<FoodItem>();
     [HideInInspector]
     public Transform cameraTransform;
+    [HideInInspector]
+    public bool panHeld;
     private float startingMoney;
     private float startingTime;
 
@@ -81,6 +83,16 @@ public class GameManager : MonoBehaviour
     public void StartCountdown()
     {
         StartCoroutine(Countdown());
+    }
+
+    public void PanHeld()
+    {
+        panHeld = true;
+    }
+
+    public void PanReleased()
+    {
+        panHeld = false;
     }
 
     private IEnumerator Countdown()

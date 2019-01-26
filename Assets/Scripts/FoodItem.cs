@@ -14,13 +14,18 @@ public class FoodItem : MonoBehaviour
     public GameObject meshHolder;
     public Image countdownImage;
     public Text title;
+    public ParticleSystem particle;
+    public ParticleSystemRenderer psRenderer;
 
     private bool bought;
     private bool flying = false;
-    private bool canScore = false;
+    private bool distanceAchieved = false;
+    private bool velocityAchieved = false;
     private Transform panArea;
     private float panTime;
+    private float leaveTime;
     private const float minTime = 0.5f;
+    private const float minVelocity = 0.25f;
     private const float minFlyingDistance = 0.5f;
 
     private void Start()
@@ -28,6 +33,12 @@ public class FoodItem : MonoBehaviour
         // Set up canvas
         fiveSecondRuleCanvas.transform.parent = transform.parent;
         countdownImage.fillAmount = 0;
+        psRenderer.material = new Material(psRenderer.material);
+        psRenderer.material.mainTexture = foodUI.nutritionImage.sprite.texture;
+        ParticleSystem.ShapeModule shape = particle.shape;
+        shape.texture = foodUI.nutritionImage.sprite.texture;
+        var emission = particle.emission;
+        emission.SetBurst(0, new ParticleSystem.Burst(0, foodInfo.quality));
     }
 
     private void Update()
@@ -35,9 +46,9 @@ public class FoodItem : MonoBehaviour
         if (flying)
         {
             if (Vector3.Distance(transform.position, panArea.position) >= minFlyingDistance)
-            {
-
-            }
+                distanceAchieved = true;
+            if (Vector3.Magnitude(rb.velocity) >= minVelocity)
+                velocityAchieved = true;
         }
     }
 
@@ -59,6 +70,10 @@ public class FoodItem : MonoBehaviour
             rb.useGravity = true;
             rb.constraints = RigidbodyConstraints.None;
         }
+
+        flying = false;
+        velocityAchieved = false;
+        distanceAchieved = false;
     }
 
     public void Release()
@@ -71,7 +86,21 @@ public class FoodItem : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Furniture")
+        {
             flying = false;
+            velocityAchieved = false;
+            distanceAchieved = false;
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Furniture")
+        {
+            flying = false;
+            velocityAchieved = false;
+            distanceAchieved = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -84,15 +113,24 @@ public class FoodItem : MonoBehaviour
 
         if (other.tag == "FryingPan" && bought)
         {
-            if (canScore)
+            if (distanceAchieved && velocityAchieved)
             {
-                canScore = false;
+                flying = false;
+                distanceAchieved = false;
+                velocityAchieved = false;
                 Score();
             }
             panTime = Time.time;
-            flying = false;
         }
     }
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.tag == "FryingPan" && bought) {
+    //        if (Time.time - leaveTime >= 0.25f)
+    //            flying = false;
+    //    }
+    //}
 
     private void OnTriggerExit(Collider other)
     {
@@ -108,13 +146,22 @@ public class FoodItem : MonoBehaviour
             {
                 panArea = other.transform;
                 flying = true;
+                leaveTime = Time.time;
             }
         }
     }
 
     private void Score()
     {
-        throw new NotImplementedException();
+        if (GameManager.instance.panHeld)
+        {
+            Debug.Log($"{foodInfo.name} + scored!");
+            particle.Play();
+        }
+        else
+        {
+            Debug.Log($"{foodInfo.name} + NOT HOLDING!");
+        }
     }
 
     private IEnumerator FiveSecondRule()

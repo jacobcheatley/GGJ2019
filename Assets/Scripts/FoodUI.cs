@@ -16,7 +16,7 @@ public class FoodUI : MonoBehaviour
     public GameObject[] disableOnCantBuy;
     public GameObject cross;
 
-    public void Start()
+    public void Awake()
     {
         // Name and Price
         namePriceText.text = $"{foodInfo.name} - ${foodInfo.price}";

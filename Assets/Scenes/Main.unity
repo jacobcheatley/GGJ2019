@@ -899,9 +899,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fridge
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 40666ffc1d79cdb40807a59d5c309c73, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 40666ffc1d79cdb40807a59d5c309c73, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 40666ffc1d79cdb40807a59d5c309c73, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 40666ffc1d79cdb40807a59d5c309c73, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 40666ffc1d79cdb40807a59d5c309c73, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2207,12 +2219,34 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003635509}
+        m_MethodName: PanHeld
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onDetachedFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1003635509}
+        m_MethodName: PanReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &898420285
@@ -2705,6 +2739,7 @@ MonoBehaviour:
   timeRemaining: 120
   fridgeFoodObjects: []
   cameraTransform: {fileID: 0}
+  panHeld: 0
 --- !u!1 &1047038310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3122,7 +3157,7 @@ GameObject:
   - component: {fileID: 1322358000}
   m_Layer: 0
   m_Name: BenchObject
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4348,7 +4383,7 @@ GameObject:
   - component: {fileID: 1477037012}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4663,7 +4698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1716504910
 Transform:
   m_ObjectHideFlags: 0
@@ -5141,37 +5176,101 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stove
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: TopLeftCoil
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: TopRightCoil
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: BottomLeftCoil
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: BottomRightCoil
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100016, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: TopRightKnob
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: TopLeftKnob
       objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100020, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: BottomRightKnob
       objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_Name
       value: BottomLeftKnob
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: a084ec977039541408267e604d44f745, type: 3}
+      propertyPath: m_TagString
+      value: Furniture
       objectReference: {fileID: 0}
     - target: {fileID: 400032, guid: a084ec977039541408267e604d44f745, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6058,7 +6157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045211047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.645, z: 2.845}
+  m_LocalPosition: {x: 0, y: 1.645, z: 2.965}
   m_LocalScale: {x: 0.8, y: 0.45, z: 1}
   m_Children:
   - {fileID: 1556102024}
@@ -6276,7 +6375,7 @@ Transform:
   m_GameObject: {fileID: 2132895401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.91, z: 0}
-  m_LocalScale: {x: 4.022134, y: 2.1584108, z: 4.022134}
+  m_LocalScale: {x: 3.522826, y: 1.7217416, z: 3.522826}
   m_Children: []
   m_Father: {fileID: 898420283}
   m_RootOrder: 1
@@ -6289,7 +6388,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132895401}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1

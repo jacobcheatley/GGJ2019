@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - Consumption
   - FryingPan
+  - Furniture
   layers:
   - Default
   - TransparentFX
