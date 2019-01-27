@@ -157,6 +157,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &114000013436842098
 MonoBehaviour:
@@ -230,5 +231,5 @@ MonoBehaviour:
   interactable: {fileID: 0}
   renderer: {fileID: 0}
   affectMaterial: 1
-  gripSqueeze: {fileID: 0}
-  pinchSqueeze: {fileID: 0}
+  gripSqueeze: {fileID: 11400000, guid: 42d375f6514ead74ead772f38e90be56, type: 2}
+  pinchSqueeze: {fileID: 11400000, guid: 42d375f6514ead74ead772f38e90be56, type: 2}

@@ -11,6 +11,7 @@ public class StoveCoil : MonoBehaviour
     private float heatPercent = 0;
     public float heatSpeed = 0.1f;
     private Renderer renderer;
+    public ParticleSystem particle;
 
     void Start()
     {
@@ -32,10 +33,12 @@ public class StoveCoil : MonoBehaviour
     public void TurnOn()
     {
         on = true;
+        particle.Play();
     }
 
     public void TurnOff()
     {
         on = false;
+        particle.Stop();
     }
 }

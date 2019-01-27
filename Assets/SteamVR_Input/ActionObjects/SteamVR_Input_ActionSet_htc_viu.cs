@@ -18,5 +18,7 @@ namespace Valve.VR
     {
         
         public SteamVR_Input_ActionSet_htc_viu_In inActions;
+        
+        public SteamVR_Input_ActionSet_htc_viu_Out outActions;
     }
 }

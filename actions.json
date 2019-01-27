@@ -257,6 +257,11 @@
       "name": "/actions/htc_viu/in/viu_axis_4xy",
       "type": "vector2",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/htc_viu/out/viu_vib_01",
+      "type": "vibration",
+      "requirement": "optional"
     }
   ],
   "action_sets": [
@@ -414,7 +419,8 @@
       "/actions/htc_viu/in/viu_axis_1xy": "Axis1 X&Y",
       "/actions/htc_viu/in/viu_axis_2xy": "Axis2 X&Y (Thumbstick)",
       "/actions/htc_viu/in/viu_axis_3xy": "Axis3 X&Y",
-      "/actions/htc_viu/in/viu_axis_4xy": "Axis4 X&Y"
+      "/actions/htc_viu/in/viu_axis_4xy": "Axis4 X&Y",
+      "/actions/htc_viu/out/viu_vib_01": "Vibration"
     }
   ]
 }

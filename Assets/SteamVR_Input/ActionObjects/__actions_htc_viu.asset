@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: adf0c2bde9d029b4785cef64af91764b, type: 2}
   - {fileID: 11400000, guid: 7320f6ecbc75a1a478baea1cc994fb24, type: 2}
   - {fileID: 11400000, guid: e13420e749575a44aaec25b70b2e3c77, type: 2}
+  - {fileID: 11400000, guid: f2d9defc6d856b043a3a9438710d230a, type: 2}
   nonVisualInActions:
   - {fileID: 11400000, guid: 6769cd8e59003bd43bf508bfebd4c44c, type: 2}
   - {fileID: 11400000, guid: 49047f1c6f675cb488d0b9b4a1a18504, type: 2}
@@ -95,7 +96,9 @@ MonoBehaviour:
   visualActions: []
   poseActions: []
   skeletonActions: []
-  outActionArray: []
+  outActionArray:
+  - {fileID: 11400000, guid: f2d9defc6d856b043a3a9438710d230a, type: 2}
   fullPath: /actions/htc_viu
   usage: leftright
   inActions: {fileID: 11400000, guid: ba5f65d2cb7a60c43bc4fa8d8dd092dc, type: 2}
+  outActions: {fileID: 11400000, guid: ac8f34cdb9048a748911a21ef1d49379, type: 2}

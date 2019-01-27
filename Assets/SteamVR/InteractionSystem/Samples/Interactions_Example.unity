@@ -1766,6 +1766,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &80417568
 MonoBehaviour:
@@ -3502,6 +3503,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!1 &277229944
 GameObject:
@@ -3613,6 +3615,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &277229949
 MonoBehaviour:
@@ -3793,6 +3796,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!1 &289104847
 GameObject:
@@ -5424,6 +5428,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &388899355
 MonoBehaviour:
@@ -6953,6 +6958,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!54 &504149797
 Rigidbody:
@@ -8238,6 +8244,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &634688662
 MonoBehaviour:
@@ -11308,6 +11315,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!64 &888846723
 MeshCollider:
@@ -15642,6 +15650,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1224984518
 MonoBehaviour:
@@ -16470,6 +16479,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1298765615
 MonoBehaviour:
@@ -18705,6 +18715,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1431990461
 MonoBehaviour:
@@ -20632,6 +20643,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1566332641
 MonoBehaviour:
@@ -21789,6 +21801,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1655820027
 MonoBehaviour:
@@ -22047,6 +22060,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1679363261
 MonoBehaviour:
@@ -22601,6 +22615,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1703345923
 MonoBehaviour:
@@ -25942,6 +25957,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &1989132726
 MonoBehaviour:
@@ -26754,6 +26770,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &2053235234
 MonoBehaviour:
@@ -27298,6 +27315,7 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []
 --- !u!114 &2108325451
 MonoBehaviour:

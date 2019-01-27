@@ -319,4 +319,5 @@ MonoBehaviour:
   handFollowTransformPosition: 1
   handFollowTransformRotation: 1
   highlightOnHover: 1
+  highlightHolder: {fileID: 0}
   hideHighlight: []

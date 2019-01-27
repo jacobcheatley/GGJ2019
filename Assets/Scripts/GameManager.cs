@@ -1,4 +1,5 @@
 ﻿using HTC.UnityPlugin.Vive;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,16 +21,23 @@ public class GameManager : MonoBehaviour
     public GameObject[] foodPrefabs;
     public Text flatMoneyText;
     public Gradient moneyGradient;
-    public float timeRemaining = 90;
+    public float gameTime = 60;
+    public Dictionary<FoodGroup, int> scores = new Dictionary<FoodGroup, int>();
+    public int bonusScore = 0;
+    public ScoreCanvas scoreCanvas;
+    public EggTimer eggTimer;
 
     [HideInInspector]
     public List<FoodItem> fridgeFoodObjects = new List<FoodItem>();
+
     [HideInInspector]
     public Transform cameraTransform;
     [HideInInspector]
     public bool panHeld;
     private float startingMoney;
-    private float startingTime;
+    [HideInInspector]
+    public bool canScore = false;
+    private bool playedGame = false;
 
     public void Awake()
     {
@@ -40,7 +48,6 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         startingMoney = money;
-        startingTime = timeRemaining;
         cameraTransform = Camera.main.transform;
         //Spawn food in fridge
         for (int i = 0; i < spawnLocations.Length; i++)
@@ -48,15 +55,33 @@ public class GameManager : MonoBehaviour
             Transform location = spawnLocations[i];
             fridgeFoodObjects.Add(Instantiate(Randomization.RandomObject(foodPrefabs), location.position, Quaternion.identity).GetComponent<FoodItem>());
         }
+
+        for (int i = 0; i <= (int)FoodGroup.Dairy; i++)
+        {
+            scores.Add((FoodGroup)i, 0);
+        }
+
+        scoreCanvas.UpdateScore(scores, bonusScore);
     }
 
-    public void Update()
+    public void StartGame()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (!playedGame)
         {
-            Debug.Log("Resetting scene");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            playedGame = true;
+            canScore = true;
+            eggTimer.SetTicking(gameTime);
         }
+    }
+
+    public void IncreaseScore(FoodGroup foodGroup, int score, int bonus)
+    {
+        if (!canScore)
+            return;
+
+        scores[foodGroup] += score;
+        bonusScore += bonus;
+        scoreCanvas.UpdateScore(scores, bonusScore);
     }
 
     public void BuyFood(FoodItem foodItem)
@@ -80,11 +105,6 @@ public class GameManager : MonoBehaviour
         flatMoneyText.text = "$" + money;
     }
 
-    public void StartCountdown()
-    {
-        StartCoroutine(Countdown());
-    }
-
     public void PanHeld()
     {
         panHeld = true;
@@ -95,12 +115,9 @@ public class GameManager : MonoBehaviour
         panHeld = false;
     }
 
-    private IEnumerator Countdown()
+    public void EndGame()
     {
-        while (timeRemaining >= 0)
-        {
-            timeRemaining -= Time.deltaTime;
-            yield return null;
-        }
+        Debug.Log("ENDED TIMER");
+        canScore = false;
     }
 }

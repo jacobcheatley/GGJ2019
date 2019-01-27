@@ -125,6 +125,8 @@ namespace Valve.VR
         
         public static SteamVR_Action_Vector2 @__actions_htc_viu_in_viu_axis_4xy;
         
+        public static SteamVR_Action_Vibration @__actions_htc_viu_out_viu_vib_01;
+        
         public static void Dynamic_InitializeActions()
         {
             SteamVR_Input.@__actions_default_in_InteractUI.Initialize();
@@ -181,6 +183,7 @@ namespace Valve.VR
             SteamVR_Input.@__actions_htc_viu_in_viu_axis_2xy.Initialize();
             SteamVR_Input.@__actions_htc_viu_in_viu_axis_3xy.Initialize();
             SteamVR_Input.@__actions_htc_viu_in_viu_axis_4xy.Initialize();
+            SteamVR_Input.@__actions_htc_viu_out_viu_vib_01.Initialize();
         }
         
         public static void Dynamic_InitializeInstanceActions()
@@ -239,6 +242,7 @@ namespace Valve.VR
             Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_2xy = ((SteamVR_Action_Vector2)(SteamVR_Input_References.GetAction("__actions_htc_viu_in_viu_axis_2xy")));
             Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_3xy = ((SteamVR_Action_Vector2)(SteamVR_Input_References.GetAction("__actions_htc_viu_in_viu_axis_3xy")));
             Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_4xy = ((SteamVR_Action_Vector2)(SteamVR_Input_References.GetAction("__actions_htc_viu_in_viu_axis_4xy")));
+            Valve.VR.SteamVR_Input.@__actions_htc_viu_out_viu_vib_01 = ((SteamVR_Action_Vibration)(SteamVR_Input_References.GetAction("__actions_htc_viu_out_viu_vib_01")));
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
                     Valve.VR.SteamVR_Input.@__actions_default_in_InteractUI,
                     Valve.VR.SteamVR_Input.@__actions_default_in_Teleport,
@@ -293,7 +297,8 @@ namespace Valve.VR
                     Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_1xy,
                     Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_2xy,
                     Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_3xy,
-                    Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_4xy};
+                    Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_4xy,
+                    Valve.VR.SteamVR_Input.@__actions_htc_viu_out_viu_vib_01};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.SteamVR_Action_In[] {
                     Valve.VR.SteamVR_Input.@__actions_default_in_InteractUI,
                     Valve.VR.SteamVR_Input.@__actions_default_in_Teleport,
@@ -349,9 +354,11 @@ namespace Valve.VR
                     Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_3xy,
                     Valve.VR.SteamVR_Input.@__actions_htc_viu_in_viu_axis_4xy};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.SteamVR_Action_Out[] {
-                    Valve.VR.SteamVR_Input.@__actions_default_out_Haptic};
+                    Valve.VR.SteamVR_Input.@__actions_default_out_Haptic,
+                    Valve.VR.SteamVR_Input.@__actions_htc_viu_out_viu_vib_01};
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[] {
-                    Valve.VR.SteamVR_Input.@__actions_default_out_Haptic};
+                    Valve.VR.SteamVR_Input.@__actions_default_out_Haptic,
+                    Valve.VR.SteamVR_Input.@__actions_htc_viu_out_viu_vib_01};
             Valve.VR.SteamVR_Input.actionsPose = new Valve.VR.SteamVR_Action_Pose[] {
                     Valve.VR.SteamVR_Input.@__actions_default_in_Pose};
             Valve.VR.SteamVR_Input.actionsBoolean = new Valve.VR.SteamVR_Action_Boolean[] {

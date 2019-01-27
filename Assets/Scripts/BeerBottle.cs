@@ -13,6 +13,8 @@ public class BeerBottle : MonoBehaviour
     public Drunkeness drunkeness;
     public Gradient gradient;
     public Light[] lights;
+    public AudioSource source;
+    public AudioClip glug;
 
     bool held = false;
     private List<DrinkInstance> drinks = new List<DrinkInstance>();
@@ -37,6 +39,7 @@ public class BeerBottle : MonoBehaviour
         {
             Debug.Log("Drank");
             drinks.Add(new DrinkInstance { timeRemaining = 30f, halfTime = 15f });
+            source.PlayOneShot(glug);
         }
     }
 

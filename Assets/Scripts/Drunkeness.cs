@@ -8,6 +8,7 @@ public class Drunkeness : MonoBehaviour
 
     private float offsetScale;
     private float warpScale;
+    private float drugScale;
 
     public void SetVariables(float offsetScale, float warpScale)
     {
@@ -15,10 +16,16 @@ public class Drunkeness : MonoBehaviour
         this.warpScale = warpScale;
     }
 
+    public void SetDrugScale(float drugScale)
+    {
+        this.drugScale = drugScale;
+    }
+
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         material.SetFloat("_OffsetScale", offsetScale);
         material.SetFloat("_WarpScale", warpScale);
+        material.SetFloat("_DrugScale", drugScale);
         Graphics.Blit(source, destination, material);
     }
 }
