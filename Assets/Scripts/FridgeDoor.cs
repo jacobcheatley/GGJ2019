@@ -12,6 +12,7 @@ public class FridgeDoor : MonoBehaviour
     public AudioSource source;
     public AudioClip openClip;
     public AudioClip closeClip;
+    public AudioClip lambSauce;
 
     private void Update()
     {
@@ -35,7 +36,12 @@ public class FridgeDoor : MonoBehaviour
             if (closed)
                 source.PlayOneShot(closeClip, 0.5f);
             else
+            {
+                if (GameManager.instance.geraltActive)
+                    GameManager.instance.geralt.PlayOneShot(lambSauce);
+
                 source.PlayOneShot(openClip, 0.5f);
+            }
         }
     }
 }

@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public int bonusScore = 0;
     public ScoreCanvas scoreCanvas;
     public EggTimer eggTimer;
+    public bool geraltActive = false;
+    public AudioSource geralt;
 
     [HideInInspector]
     public List<FoodItem> fridgeFoodObjects = new List<FoodItem>();
